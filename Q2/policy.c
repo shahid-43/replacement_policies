@@ -21,6 +21,13 @@ float policy_LRU(struct workload * w, int cache_size)
 	return hit_rate;
 }
 
+float policy_LRUapprox(struct workload * w, int cache_size)
+{
+	float hit_rate = 0;
+	/* fill this */
+	return hit_rate;
+}
+
 float policy_RANDOM(struct workload * w, int cache_size)
 {
 	float hit_rate = 0;
