@@ -48,6 +48,6 @@ struct workload * generate_local(struct workload * w);
 float policy_FIFO(struct workload * w, int cache_size);
 float policy_LRU(struct workload * w, int cache_size);
 float policy_RANDOM(struct workload * w, int cache_size);
-
+float policy_LRUapprox(struct workload * w, int cache_size);
 
 #endif /* __DEF_H__ */
