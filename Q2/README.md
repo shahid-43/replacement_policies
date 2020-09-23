@@ -1,4 +1,4 @@
-# Assignment 2 - Q2
+# Assignment 2 Question 2
 
 In this question, complete individual files and implement in C and compare the various policies for caching. 
 
