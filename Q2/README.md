@@ -4,7 +4,7 @@ In this question, complete individual files and implement in C and compare the v
 
 You will be implementing: 
 
-Policies: LRU (exact), FIFO, Random
+Policies: LRU (exact and approx), FIFO, Random
 Workloads: 80-20, looping, random
 
 1. Add required header files in each of the files and mention why they are required.
