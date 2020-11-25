@@ -1,6 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "trie.h"
+#include <stdbool.h>
+
+
+typedef struct node { 
+    int value;
+    bool is_end;
+    // #ifndef _NO_HOH_LOCK_TRIE
+    // pthread_mutex_t node_lock;
+    // #endif
+    struct node* children[26];   // Array mapping character to the next node
+} _trie_node_t;
+
+typedef _trie_node_t* trie_node_t;
+
+typedef struct {
+    trie_node_t head; // The head/start node of trie
+    // Add whatever variables you require for locking here
+} _trie_t;
+
+typedef _trie_t* trie_t;
+
 
 trie_t init_trie(void){
     // Write your code here
@@ -80,10 +100,12 @@ int find(trie_t trie,char* key, int* val_ptr){
 	return 0;
 
 } 
+}
 
 void delete_kv(trie_t trie, char* key){
-    // Write your code here
+    return;
 }
+
 
 char** keys_with_prefix(trie_t trie, char* prefix){
     // Write your code here
@@ -93,5 +115,5 @@ char** keys_with_prefix(trie_t trie, char* prefix){
 }
 
 void delete_trie(trie_t trie){
-    // Write your code here
+    return ;
 }
