@@ -2,26 +2,6 @@
 #include <stdlib.h>
 #include "trie.h"
 
-
-typedef struct node { 
-    int value;
-    bool is_end;
-    // #ifndef _NO_HOH_LOCK_TRIE
-    // pthread_mutex_t node_lock;
-    // #endif
-    struct node* children[26];   // Array mapping character to the next node
-} _trie_node_t;
-
-typedef _trie_node_t* trie_node_t;
-
-typedef struct {
-    trie_node_t head; // The head/start node of trie
-    // Add whatever variables you require for locking here
-} _trie_t;
-
-typedef _trie_t* trie_t;
-
-
 trie_t init_trie(void){
     // Write your code here
     trie_t trie = (_trie_t*)malloc(sizeof(_trie_t));
