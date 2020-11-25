@@ -97,9 +97,10 @@ int find(trie_t trie,char* key, int* val_ptr){
 	// if current node is a leaf and we have reached the
 	// end of the string, return 1
     
-	return 0;
+	
 
 } 
+	return 0;
 }
 
 void delete_kv(trie_t trie, char* key){
