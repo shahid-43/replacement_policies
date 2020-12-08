@@ -24,18 +24,21 @@ int main()
 	struct workload* t=NULL;
 
 	char* files[]={"loop.csv","random.csv"};//title of the csv file generated
-	int type,i,csize;					//type is used for indicating type of workload
+	int type,i,csize;
+	//type is to indicate the type of work load
+	//i for specific replacment policy
+	//csize is the cachesize
 
 	for (type = 0; type < 2; type++)
 	{
 		if(type==0){
-			pages=50;    		//for loop working we are only considering 50 unique pages
+			pages=50;    		
 		}
 		
-        //data written into csv file 
+        //creating a csv file to write the data in to 
 		FILE* fp=fopen(files[type],"w+");
 		t=generate_workload(type,pages,size);
-		//generates the workload
+		
 		for ( i = 0; i < replace; i++)
 		{
 			if(i==0){
