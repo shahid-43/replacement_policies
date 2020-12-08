@@ -28,6 +28,9 @@ int main()
 
 	for (type = 0; type < 2; type++)
 	{
+		if(type==0){
+			pages=50;    		//for loop working we are only considering 50 unique pages
+		}
 		
         //data written into csv file 
 		FILE* fp=fopen(files[type],"w+");
