@@ -27,7 +27,7 @@ int findcache(int cache[],int size,int page){
 	int i,check=-1;
 	for ( i = 0; i < size; i++)
 	{
-		if(cache[i]==page){
+		if(cache[i]==page){//if hit occured 
 			check=i;
 			return check;
 		}
